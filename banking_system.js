@@ -16,6 +16,7 @@ function menu(){
             subMenu(3)
         } else{
             console.log("Menu tidak tersedia")
+            rl.close();
         }
       })
 }

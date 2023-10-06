@@ -4,13 +4,14 @@ class BankAccount{
         this.saldo = saldo;
     }
 
-    deposit(amount,saldo){
+    deposit(amount){
+        let saldo = 0;
         saldo = saldo + parseInt(amount)
         console.log (`Saldo anda sekarang adalah ${saldo}`)
     }
 
-    withdraw(amount,saldo){
-        // let saldo;
+    withdraw(amount){
+        let saldo;
         if (saldo > 0){
             saldo = saldo - parseInt(amount)
         }else{
@@ -19,14 +20,15 @@ class BankAccount{
         console.log(`Saldo anda sekarang adalah ${saldo}`)
     }
 
-    saldonow(saldo){
+    saldonow(){
+        let saldo;
         console.log(`Jumlah saldo kamu adalah ${saldo}`)
     }
 }
 
 //testing
-const bank1 = new BankAccount(20000,0);
-bank1.deposit(20000)
-bank1.saldonow()
+// const bank1 = new BankAccount(20000,0);
+// bank1.deposit(20000)
+// bank1.saldonow()
 
 module.exports = BankAccount;
