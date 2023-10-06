@@ -25,16 +25,13 @@ function subMenu(pil){
     rl.question('Masukkan jumlah saldo: ', (amount) => {
         if (pil == 1){
             bank.withdraw(amount)
-            setTimeout(() => 1000)
-            menu()
+            setTimeout(() => menu(),1000)
         } else if (pil == 2){
             bank.deposit(amount)
-            setTimeout(() => 1000)
-            menu()
+            setTimeout(() => menu(), 1000)
         } else if (pil == 3){
             bank.saldonow()
-            setTimeout(() => 1000)
-            menu()
+            setTimeout(() => menu(), 1000)
         }else{
             rl.close();
         }
