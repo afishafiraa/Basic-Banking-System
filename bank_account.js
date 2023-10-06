@@ -1,13 +1,7 @@
-const readline = require("readline");
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
 class BankAccount{
-    constructor(amount){
+    constructor(amount, saldo){
         this.amount = amount;
-        let saldo;
+        this.saldo = saldo;
     }
 
     deposit(amount){
@@ -31,5 +25,9 @@ class BankAccount{
         console.log(`Jumlah saldo kamu adalah ${saldo}`)
     }
 }
+
+//testing
+const bank1 = new BankAccount(20000,0);
+bank1.deposit(20000)
 
 module.exports = BankAccount;
